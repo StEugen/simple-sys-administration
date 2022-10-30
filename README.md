@@ -1,2 +1,2 @@
 # simple-sys-administration
-Simple system administration for someone who needs it. Простое системное администрирование для тех кому нужно
+Simple system administration for universities and schools. Простое системное администрирование для университетов и школ.
