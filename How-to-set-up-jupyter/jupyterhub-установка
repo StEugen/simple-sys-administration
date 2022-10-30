@@ -1,0 +1,30 @@
+1)RUN sudo apt update
+2)Проверьте установлен ли python (команда: python3 --version), если нет, то напишите следующую команду: sudo apt install python
+Эта команда автоматически скачает последнюю версию python (если нужна какая-то определенная версия, то просто укажите ее: 
+sudo apt install python3.8)
+3)Также понадобятся некоторые npm-пакеты: sudo apt install npm nodejs
+4)Также надо установить pip: sudo apt install python3-pip
+
+Теперь можно начать установку jupyterhub
+1)направляйтесь в root-директорию: cd /
+2)установите jupyterhub: sudo python3 -m pip install jupyterhub 
+3)установите proxy: sudo npm install -g configurable-http-proxy
+4)установите notebook: sudo python3 -m pip install notebook
+
+Чтоже, давайте настроим jupyterhub
+1)сгенерируйте конфиг: sudo jupyterhub --generate-config
+2)Давайте немного изменим конфигурационный файл: sudo vim jupyterhub_config.py
+Вы можете добавить эти строчки где хотите или найти их:
+c.JupyterHub.port = 80
+c.Authenticator.admin_users = {'<nameoftheuser>')
+c.Authenticator.allowed_users = {'<nameoftheuser1>', ‘<nameoftheuser2>, ‘<etc>’}
+сохраните файл и выйдите
+3)Теперь надо добавить пользователей: sudo adduser <nameoftheuser> 
+4)установите пароль: sudo passwd <nameoftheuser>
+
+Теперь все готово для запуска jupyterhub
+RUN sudo jupyterhub
+По умолчанию jupyterhub будет находиться по адрессу типа 127.0.x.x; Чтобы указать какой-то определенной ip-адресс введите: 
+--ip <ip_adress_you_need>
+
+Вот и все

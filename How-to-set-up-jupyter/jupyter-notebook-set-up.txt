@@ -1,0 +1,15 @@
+1)install jupyter notebook on server
+	sudo apt install python3
+	sudo apt install python3-pip
+	sudo pip3 install --upgrade pip
+	sudo pip3 install virtualenv
+2)create folder for virtual environment for jupiter
+3)start virtualenv
+	virtualenv <virtualenv name>
+4)activate 
+	source <virtualenv name>/bin/activate
+5)install jupyter in this environment
+	pip install jupyter
+6)start
+	jupyter notebook --no-browser --ip <specify the ip>
+7)to let every machine see the server configure router setings
