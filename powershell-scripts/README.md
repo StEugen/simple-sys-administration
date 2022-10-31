@@ -1,1 +1,2 @@
-Here you can find different powershell scripts for automation, there are comments about what this scripts do
+Here you can find different powershell scripts for automation, there are comments about what this scripts do<br>
+Здесь вы можете найти powershell скрипты для автоматизации, есть коментарии о том, что скрипты делают
