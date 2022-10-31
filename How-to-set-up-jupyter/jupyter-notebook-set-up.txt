@@ -1,4 +1,4 @@
-1)install jupyter notebook on server
+1)install dependencies for jupyter notebook on server
 	sudo apt install python3
 	sudo apt install python3-pip
 	sudo pip3 install --upgrade pip
